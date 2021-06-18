@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice|GeeksforGeeks</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Own stylesheet -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <!-- Header part -->
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow">
+            <div class="container-fluid">
+                <button class="navbar-toggler border-0" type="button" 
+                data-bs-toggle="collapse"
+                data-bs-target="#navBarCollapse"
+                aria-controls="navBarCollapse"
+                aria-expanded="false"
+                aria-lable="Toggle button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-brand fw-bold fs-3 brand__container">
+                    <img src="./assests/logo.png" alt="Logo" class="brand__logo">
+                    Practice
+                </div>
+                <div class="collapse navbar-collapse nav__collapsible__container" id="navBarCollapse">
+                    <ul class="navbar-nav nav__first">
+                        <li class="nav-list">
+                            <a href="#" class="nav-link" id="padding-removal">Problems</a>
+                        </li>
+                        <li class="nav-list">
+                            <a href="#" class="nav-link" id="padding-removal">Courses</a>
+                        </li>
+                        <li class="nav-list">
+                            <a href="#" class="nav-link" id="padding-removal">Get hired</a>
+                        </li>
+                        <li class="nav-list">
+                            <a href="#" class="nav-link" id="padding-removal">Events</a>
+                        </li>
+                        <li class="nav-list problem__of__the__day">
+                            <a href="#" class="nav-link text-success">&lt/&gt Problems of the day</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav nav__second text-center">
+                        <li class="nav-item profile__icon">
+                            <a href="#" class="nav-link text-dark"><i class="fas fa-user-circle"></i></a>
+                        </li>
+                        <li class="nav-item d-lg-none fs-5 mb-3">
+                            <a href="#" class="nav-link text-dark d-inline"><i class="fas fa-user"></i> My profile</a> | <a href="#" class="nav-link text-dark d-inline"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center gap-1 gap-sm-3 search_noti_container">
+                    <div class="input-group mb-2 mt-2 search__bar">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="search bar" aria-describedby="search bar">
+                        <span class="input-group-text pl-sm-0 pr-sm-0" id="basic-addon2">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                    <div class="notification__icon">
+                        <i class="far fa-bell"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

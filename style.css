@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navigation area */
+.brand__container
+{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.brand__logo
+{
+    width: 40px;
+    object-fit: contain;
+}
+.profile__icon a i
+{
+    font-size: 32px;
+}
+.nav__first
+{
+    font-size: 16px;
+}
+.nav__second
+{
+    margin-left: auto;
+}
+.problem__of__the__day
+{
+    font-weight: 600;
+}
+
+/* Notification area */
+.search_noti_container
+{
+    position: fixed;
+    right: 60px;
+    top: 5px;
+}
+.notification__icon
+{
+    font-size: 32px;
+}
+.search__bar
+{
+    max-width: 200px;
+}
+@media (min-width: 1086px) and (max-width: 1269px)
+{
+    .nav__first
+    {
+        font-size: 14px;
+    }
+    #padding-removal
+    {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1085px)
+{
+    .nav__first
+    {
+        font-size: 12px;
+    }
+    #padding-removal
+    {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+/* Below 1024px */
+@media (max-width:991px)
+{
+    /* navigation area */
+    .nav__first
+    {
+        font-size: 16px;
+        order: 2;
+    }
+    .nav__second
+    {
+        margin-left: auto;
+        order: 1;
+    }
+
+    /* Notification area */
+    .search_noti_container
+    {
+        right: 15px;
+        top: 0px;
+    }
+    .search__bar input
+    {
+        display: none;
+    }
+    .search__bar span
+    {
+        font-size: 30px;
+        background: none;
+        border: none;
+    }
+}
+
+/* Below  */
+@media (max-width: 576px)
+{
+    .search__bar span
+    {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
