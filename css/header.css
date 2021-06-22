@@ -8,6 +8,17 @@
 }
 
 /* navigation area */
+header
+{
+    position: fixed;
+    padding: 0 !important;
+    background: #fff;
+    z-index: 10000 !important;
+}
+header nav
+{
+    position: relative;
+}
 .brand__container
 {
     position: absolute;
@@ -30,19 +41,45 @@
 }
 .nav__second
 {
-    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
 }
 .problem__of__the__day
 {
     font-weight: 600;
 }
+.profile__btn i
+{
+    font-size: 30px;
+}
+.profile__dropdown
+{
+    width: 200px;
+    padding: 0;
+    border-top: 5px solid #198754;
+}
+.profile__dropdown li a span
+{
+    color: #333;
+}
+.profile__dropdown li a i
+{
+    padding: 0 5px;
+}
+.hamburger:focus
+{
+    box-shadow: none;
+}
 
 /* Notification area */
 .search_noti_container
 {
-    position: fixed;
-    right: 60px;
-    top: 5px;
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .notification__icon
 {
@@ -52,6 +89,8 @@
 {
     max-width: 200px;
 }
+
+/* Between part */
 @media (min-width: 1086px) and (max-width: 1269px)
 {
     .nav__first
@@ -64,6 +103,8 @@
         padding-right: 4px;
     }
 }
+
+
 @media (min-width: 992px) and (max-width: 1085px)
 {
     .nav__first
@@ -76,8 +117,16 @@
         padding-right: 4px;
     }
 }
+/* Above 992px */
+@media (min-width: 992px)
+{
+    .nav__collapsible__container ul
+    {
+        display: none !important;
+    }
+}
 
-/* Below 1024px */
+/* Below 992px */
 @media (max-width:991px)
 {
     /* navigation area */
@@ -97,6 +146,7 @@
     {
         right: 15px;
         top: 0px;
+        transform: translateX(0);
     }
     .search__bar input
     {
