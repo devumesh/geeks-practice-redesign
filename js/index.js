@@ -1,6 +1,6 @@
 const problemContainer = document.querySelector('.problem__container');
 
-const problemDisplay = () => 
+const problemDisplay = (data) => 
 {
     return `<div class="col-12 col-lg-6 col-xl-4 mb-3 problem__card">
         <div class="card-body bg-white rounded-3">
@@ -12,15 +12,15 @@ const problemDisplay = () =>
             <div class="card-text mb-0 text-muted card__status__bar">
                 <span>Difficulty</span>
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: ${data.difficulty+"%"}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <span>Submission</span>
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 3%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: ${data.submission+"%"}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <span>Accuracy</span>
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 42.6%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: ${data.accuracy+"%"}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
         </div>
@@ -29,5 +29,29 @@ const problemDisplay = () =>
 
 for (let i = 0; i < 20; i++)
 {
-    problemContainer.insertAdjacentHTML('beforeend', problemDisplay());
-}
+    let randomStatus = {
+        difficulty: (Math.random() * 100).toFixed(2),
+        submission: (Math.random() * 100).toFixed(2),
+        accuracy: (Math.random() * 100).toFixed(2)
+    };
+    problemContainer.insertAdjacentHTML('beforeend', problemDisplay(randomStatus));
+};
+
+const practice = document.querySelector('.practice__Logo');
+
+const removePractice = () => 
+{
+    if (window.pageYOffset > 400)
+    {
+        practice.style.display = "none";
+    }
+    else
+    {
+        practice.style.display = "inline";
+    }
+};
+
+document.onscroll = ()=>
+{
+    removePractice();
+};
